@@ -1,0 +1,6 @@
+Theory of Computation: Thursday 10 - 12 am
+Operating Systems: Thursday 12:30 - 2:30
+Databases: Tuesday 3 - 5
+Networking: Thursday 5:30 - 7:30
+Algorithms: Wednesday 7:30 - 9:30
+Mobile Apps: Friday 8 - 10 pm

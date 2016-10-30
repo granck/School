@@ -1,0 +1,16 @@
+###############
+## Garrick Ranck
+## Chapter 6 notes
+## CSCI 2450
+###############
+
+******Encryption: Don't use readLine function to read your data for the homework assignment!******
+
+"cmp" function takes 2 arguments ex. cmp eax, ebx
+   - means compare eax with ebx. If eax is greater than, less than, or equal to will trigger flags that you use with the next line of command
+   - "ja" = jump if a > b, "jna" = jump if a !> b, etc. This is followed by a label to jump to if these conditions are met 
+      ex. cmp eax, ebx
+          ja L1
+      means. "compare eax to ebx. If eax is greater than ebx then jump to L1"
+
+

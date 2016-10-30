@@ -1,0 +1,32 @@
+************************************************************
+* CSCI 2450
+* Notes Chapter 8: Advanced Procedures
+* Garrick Ranck
+************************************************************
+
+Stack Frames: Activation record. Every method has a stack frame(Part of the stack belonging to it) but only one stack frame will be active at any particular time.
+   A method/procedure call is being made
+   1. Argument to pass to next function will be pushed on to  the currently active stack(of the function you are running currently)
+   2. Next the address that lets you return to the previous function is pushed on to the stack
+   3. Next, the EBP register is pushed to preserve the previous base of the stack. Then EBP is given the value of ESP(to begin the stack for the next set of commands)
+   4. Allocate room on the stack for the local variables used in the function that was called
+   5. When finished with the function, reset the stack by popping EBP and moving the address into ESP 
+   
+Passing arguments by value
+   Argument values are pushed onto the stack. Return values can be placed into EAX(typical register to use) or pushed on to the stack themselves
+Passing arguments by reference
+   Offset of the argument(address?) is pushed onto the stack. Can allow direct access to changing variables or avoid having to transfer huuuuge amounts of data such as arrays
+
+Recursion: process of functions calling themselves, creating a "loop" until certain base cases are met
+
+INVOKE directive: allows you to call a procedure and pass the arguments with the call
+
+ADDR operator: returns a pointer to a variable
+
+PROC operator: declares procedure with an optional list of named paramters. 
+
+Multi-Module program: program whose code has been divided up into seperate ASM files.
+   - advantages: large programs are easier to work with when divded into separate pieces
+   - 
+
+

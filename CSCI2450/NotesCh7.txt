@@ -1,0 +1,28 @@
+*********************
+** Chapter 7 Notes: Registry Manipulations
+** CSCI 2450
+*********************
+
+Logical Shift: pushes all bits to the right or left  and adds a zero to the left/right end, pushing the farthest right/left bit onto the carry
+Arithmetic Shift: Pushes all bits to the right and fills the left most bit with the original signed bit
+SHL Instruction: Shifts to the left instead of the right. Shifting left is multiplying a number by 2. Shifting by n multiplies the operand by 2^n
+SHR Instruction: Shifts to the right....divides by a power of 2^n
+SAL: same as SHL
+SAR: pushes all bits to the right and copies left most bit into the new position
+ROL Instruction: Rotate shifts all bits to the left. Hightest bit is copied to carry flag and into the lowest bit
+ROR Instruction: Rotate shifts all bits to the right instead of the left. Same principle as ROL
+RCL Instruction: Rotate carry left shifts each bit to the left. Copies carry flag to the least significant bit. Copies most significant to carry flag
+RCR Instruction: Rotate carry right shifts each bit to the right. Copies carry flag to the most significant bit. Copies least significant to carry flag
+
+MIPS(Multiplication instructions per second): Form of measuring a cpu's performance.
+MUL Instruction: Can perform operation on 8/16/32 bit operands, BUT it can only be performed in EAX, AX, AL(That register is implied for all multiplications.)
+   DX and EDX can be used to extend the length of these calculations, but it is only used for concatenation
+IMUL Instruction: Multiplication on signed values
+DIV instruction: Division on 8/16/32 bit operand for unsigned values
+IDIV Instruction: Signed division on 8/16/32 bit
+
+Conversion Instructions
+CBW: convert byte to word extends AL to AH
+CWD: convert word to double word extends AX into DX
+CDQ: convert double word to quad word extends EAX into EDX
+

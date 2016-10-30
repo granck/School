@@ -1,0 +1,54 @@
+****
+* Assembly x86 Processors
+* Chapter 5: Procedures
+****
+
+Procedures are not native to computers. They are functional through stacks.
+
+Stack Operations
+      Runtime Stack: Pop on top, pop off top (Last in, first out).
+
+      It is managed by the CPU. SS(stack segment) and ESP(extended stack pointer). The ESP holds the address of the current item on the stack.
+      EBP = extended base pointer. points to the base of a stack
+
+      -PUSH operation: 32-push operation decrements the stack pointer(ESP) by 4(bytes) and copies a value into the location pointed to by the stack pointer. ***Pushing may be 16 bit.
+         It depends on what is being pushed. If PUSH EAX it will be 32 bits decrement, but PUSH AX will only be 16 bit decrement.
+         The stack grows downward on an x86 processor (Like a list, but it still is last in first out)
+      -POP operation: Copies value at stack(ESP) into a register or variable and increments the stack pointer (ESP) by 4(bytes). ***Poping may not necessarily be incremented by 4(bytes).
+         It depends on what the pop is being placed into. POP EAX will increment by 4(bytes) since EAX is a 32 bit register. However POP AX will increment by 2(bytes) since AX is 16 bit.
+         POP has to apply the Little Indian Rule. 
+
+      Example of PUSH / POP . When looping, you can store a value for a number of loops, push the value on the register to store another count for an inner loop
+      Example of PUSH / POP. Reversing a String. We can push each individual character of a string into registers, then pop them out in reverse.
+
+      ** Only WORD and DOUBLEWORD values can be pushed on to the stack **
+
+      PUSHFD and POPFD push and pop specific registers in a specific order for 32 bit registers
+      PUSHA and POPA do the same thing for 16 bit registers
+
+Defining and Using Procedures
+   Procedure: the ASM equivalent of a Java or C++ function. Followed is an assembly language procedure named sample
+         sample PROC
+            .
+            .
+            .
+            ret
+         sample ENDP
+   All procedures require a return call regardless of whether they are actually returning any values
+
+   Documenting procedures:
+      a.) Recieves: list of input parameters that state their usage requirements
+      b.) Returns: description of values returned by the procedure
+      c.) Requires: optional list of requirements called preconditions
+
+   CALL : obviously calls a procedure. copies address of called procedure into EIP after pushing current memory location onto the stack
+   RET: returns from a procedure and pops top of stack into EIP
+
+   Local label: visible only to statements inside the same procedure. "::"
+   Global label: visible everywhere ":"
+
+   USES operator: list the registers that will be persevered. (Won't really be discussed)
+
+
+
+

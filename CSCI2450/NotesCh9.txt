@@ -1,0 +1,45 @@
+***************************************************************
+** CSCI 2450
+** x86 Processors Assembly
+** Chapter 9: Strings and Arrays
+** Garrick Ranck
+***************************************************************
+
+String instructions
+- MOVSB / MOVSW / MOVSD : copy data from the memory location pointed to by ESI to the memory location pointed to by EDI
+  ESI and EDI are automatically incremented / decremented (If BYTE +- 1, if WORD +- 2, if DWORD +- 4)
+  Direction flag controls whether to increment / decrement (0 = increment, 1 = decrement)
+
+      .data
+      source DWORD 0FFFFFFFFFFFh
+      target DWORD ?
+      .code
+      mov esi, OFFSET source
+      mov edi, OFFSET target
+      movsd
+
+  REP = repeat prefix. Can be placed in front of the movs command. Number of reps is determined by the ECX register
+
+- COMPSB / COMPSW / COMPSD : compare a memory operand in ESI to a memory operand in EDI
+  REPE (Repeat if equal) 
+  REPZ (Repeat if zero)
+  REPNE (Repeat if not equal) 
+  REPNZ (Repeat if not zero)
+
+- SCANSB / SCASW / SCASD : compares a value in EAX to a value in EDI
+
+- STOSB / STOSW / STOSD : stores EAX into memory
+
+- LODSD / LODSW / LODSD : loads memory from ESI into EAX
+
+Two Dimensional Arrays
+
+- structures (similar to objects). Represented as a piece of data that has various "variables" at different offsets within that data
+  you can then use the structure as a data type and name other variables as that type
+
+ Base Index Operand and Base Index Displacement 
+ a.) Operand: adds the values of two registers, producing an effective address. Uses 32 bit GENERAL PURPOSE registers
+   Common applicatoin used when creating structures and assigning these structures as arrays(creating multi-dimensional arrays)
+
+ b.) Displacement: adds base and index registers to a constant, producing an effective address. Uses 32/64 bit GENERAL PURPOSE registers
+   [base + index + displacement] or displacement[base + index]

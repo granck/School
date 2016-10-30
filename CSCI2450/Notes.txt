@@ -1,0 +1,27 @@
+/**
+* CSCI 2450
+* January 20
+* Chapter 1
+**/
+
+- Converting binary/hexidecimal etc.
+   (four binary numbers = 16 combinations ,aka, representing 16 numbers)
+- Negative bits on a binary number are the first digit on the number. If it is a 1 it is negative. If it is a 0 it is positive
+   (This 1 or 0 is lost as it only serves to provide context)
+   11001011 = negative number, lose the first 1 and the binary value is 1001011
+   01001011 = positive number, lose the first 0 and the binary value is 1001011
+   (Same number, but one is positive and the other is negative)
+- Two's complement
+   Reverse all bits and add 1 to it. 
+
+- byte = 8 bits
+- word = 16 bits
+- doubleword = 32 bits
+- quadword = 64 bits
+
+- Universal character set? = standard ASCII, pronounced as-kee, (0 - 127), extended ASCII goes to 255
+- null terminated characters = a sequence of characters that gets ended, the sequence is terminated? New line, etc
+
+NOT GATE   --->0---
+AND GATE   ===D----
+OR GATE    ===))---

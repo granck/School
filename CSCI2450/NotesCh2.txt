@@ -1,0 +1,12 @@
+/**
+* CSCI 2450
+* January 20
+* Chapter 2
+**/
+
+Basic Microcomputer Design
+- Data bus accepts 0's and 1's
+- Control Unit (CU) controls the sequence of binary input
+- Clock sychronizes the operations of the processor
+- registers store the data to be processed by the gates in the CPU
+- address bus - location of items in memory

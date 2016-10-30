@@ -1,0 +1,8 @@
+download ida pro software ida 5.0
+download dev c++ 5 (bloodshed) = linux c++ compiler made to run in windows
+Open dev c++. Install all defaults. Open Hello dev file from within
+
+open ida pro. Select "Portable executable" , select "load resources" check box, start
+convert it to text view
+
+the main you are concerned with is "_main"

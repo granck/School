@@ -1,0 +1,25 @@
+#include <iostream> 
+
+using namespace std;
+
+int addTwoNums(int, int);
+
+int main(int argc, char *argv[])
+{
+   int a = 10;
+   int b = 35;
+   int sum = 0;
+   
+   sum = addTwoNums(a, b);
+   
+   cout << sum << "\n";
+   system ("pause");
+
+}//end main
+
+int addTwoNums(int x, int y){
+   int sum = 0;
+   sum = x + y;
+   return sum;
+
+}//end method addTwoNums
