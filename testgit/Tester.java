@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-private class Tester{
+public class Tester{
 	
 	private int userNumber;
 	public Tester(){
